@@ -1,0 +1,8 @@
+/* Static warm glow around the footer logo — same treatment as LogoIntro's
+   final glow state, kept always-on here (no build-up animation). */
+.logoGlow {
+  filter:
+    drop-shadow(0 0 18px rgba(255, 190, 60, 0.95))
+    drop-shadow(0 0 50px rgba(255, 130, 0, 0.65))
+    drop-shadow(0 0 110px rgba(220, 70, 0, 0.35));
+}

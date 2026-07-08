@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 492">
+  <g transform="translate(6,6) scale(0.95)">
+    <circle cx="246" cy="246" r="238" fill="#FBF7F0" stroke="#2B2118" stroke-width="10"/>
+    <circle cx="246" cy="246" r="214" fill="none" stroke="#F2B705" stroke-width="4" stroke-dasharray="9 7"/>
+    <path d="M 145 168 C 145 135, 347 135, 347 168 C 347 197, 307 197, 246 197 C 185 197, 145 197, 145 168 Z"
+          fill="#1E8A3C"/>
+    <text x="246" y="318" text-anchor="middle"
+          font-family="Arial, Helvetica, sans-serif" font-weight="900"
+          font-size="210" fill="#E8431F">R</text>
+  </g>
+  <text x="540" y="205" font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="88" letter-spacing="4" fill="#2B2118">TACOS</text>
+  <text x="540" y="300" font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="48" letter-spacing="0.5" fill="#E8431F">DON REFUGIO</text>
+  <text x="540" y="360" font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+        font-size="40" fill="#2B2118">el placer del sabor</text>
+</svg>

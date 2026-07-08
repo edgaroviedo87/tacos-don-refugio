@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/*
+ * Tacos Don Refugio — design tokens (brand-visual-direction.md §1).
+ * Tailwind v4 CSS-first config: tokens in @theme generate utilities
+ * (e.g. bg-green-500, text-brown-900, font-display, rounded-card, shadow-warm-md).
+ * BRAND colors and SEMANTIC colors are kept in clearly separate groups.
+ */
+@theme {
+  /* ---- Brand primitives (the logo colors) ---- */
+  --color-green-500: #1e8a3c; /* Verde Refugio — brand primary, large/display only */
+  --color-green-700: #15692c; /* Verde tinta — accessible green for text/links (AA) */
+  --color-red-500: #e8431f; /* Rojo Chile — energy/glow, large/bold only */
+  --color-red-600: #c2371a; /* Rojo profundo — accessible CTA/text red (AA) */
+  --color-gold-500: #f2b705; /* Oro Maíz — decorative only, never text on light */
+  --color-brown-900: #2b2118; /* Café — brand ink */
+  --color-cream-50: #fbf7f0; /* warm light background */
+
+  /* ---- Warm neutral ramp (warm-tinted, never cold grey) ---- */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #fbf7f0;
+  --color-neutral-100: #f5ede0;
+  --color-neutral-200: #e7dccb;
+  --color-neutral-400: #a89a86;
+  --color-neutral-600: #6b5e4e;
+  --color-neutral-900: #2b2118;
+
+  /* ---- Warm dark / wood surfaces (hero & dark sections) ---- */
+  --color-wood-950: #160f09;
+  --color-wood-900: #241910;
+  --color-wood-800: #3a2a1c;
+  --color-wood-700: #5a4127;
+  --color-on-dark: #fbf1e2;
+  --color-on-dark-muted: #c9b79e;
+
+  /* ---- Semantic colors (functional UI only — kept distinct from brand) ---- */
+  --color-success: #2e7d32;
+  --color-warning: #b8860b;
+  --color-error: #b3261e;
+  --color-info: #1f6fb2;
+
+  /* ---- Semantic aliases (token mapping §1.6) ---- */
+  --color-primary: #15692c; /* interactive green (green-700) */
+  --color-primary-fill: #1e8a3c; /* brand green fill (green-500) */
+  --color-accent: #c2371a; /* label-safe CTA red (red-600) */
+  --color-accent-glow: #e8431f; /* hover/glow (red-500) */
+  --color-highlight: #f2b705; /* decorative gold */
+  --color-surface: #ffffff;
+  --color-surface-inverse: #241910;
+  --color-bg: #ffffff;
+  --color-bg-warm: #fbf7f0;
+  --color-text: #2b2118;
+  --color-text-muted: #6b5e4e;
+  --color-on-primary: #ffffff;
+
+  /* ---- Fonts (wired from next/font in fonts.ts) ---- */
+  --font-display: var(--font-anton), system-ui, sans-serif;
+  --font-heading: var(--font-oswald), system-ui, sans-serif;
+  --font-body: var(--font-nunito), system-ui, sans-serif;
+  --font-script: var(--font-pacifico), cursive;
+
+  /* ---- Radii (brand §3): buttons 8, images 12, cards 16, pills full ---- */
+  --radius-button: 8px;
+  --radius-image: 12px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+
+  /* ---- Warm-tinted soft shadows (brown-based, not grey) ---- */
+  --shadow-warm-sm: 0 1px 2px rgba(43, 33, 24, 0.08);
+  --shadow-warm-md: 0 6px 16px rgba(43, 33, 24, 0.1);
+  --shadow-warm-lg: 0 16px 40px rgba(43, 33, 24, 0.14);
+}
+
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for the sticky header on anchor jumps */
+}
+
+body {
+  background-color: var(--color-bg-warm);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible focus for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---- Type scale (brand §2) ---- */
+@layer components {
+  .type-display {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: clamp(2.75rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+  .type-h1 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 3.05rem);
+    line-height: 1.1;
+  }
+  .type-h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3vw, 2.44rem);
+    line-height: 1.15;
+  }
+  .type-h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 2.4vw, 1.95rem);
+    line-height: 1.2;
+  }
+  .type-h4 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.56rem;
+    line-height: 1.25;
+  }
+  .type-body-l {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  .type-body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .type-small {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  .type-eyebrow {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8125rem;
+  }
+  .type-price {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+  .type-script {
+    font-family: var(--font-script);
+    font-weight: 400;
+  }
+}
+
+/* Respect reduced-motion globally */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* View Transitions (plan M6.3b) — soft-nav feel for real multi-page routes.
+   The @view-transition at-rule enables the browser's navigation View Transitions
+   API (Chrome 111+). Other browsers see the same instant Next.js Link soft-nav.
+   Disabled automatically under prefers-reduced-motion (rule above zeroes
+   transition-duration so the cross-fade collapses to an instant cut). */
+@view-transition {
+  navigation: auto;
+}
+
+/* Give the page root a stable view-transition-name so cross-page transitions
+   apply a default cross-fade. Individual sections can declare their own names
+   when the creative direction calls for element-level continuity (e.g. the
+   hero logo persisting into /menu). */
+:root {
+  view-transition-name: page-root;
+}

@@ -1,0 +1,55 @@
+# Brainstorming / visual companion session files
+.superpowers/
+
+# Git worktrees (isolated task workspaces)
+.worktrees/
+
+# Transient temp files from one-off asset scripts
+.tmp-favicon-*.png
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+
+# Production build
+/build
+/dist
+
+# Misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment variables
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Editor / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
