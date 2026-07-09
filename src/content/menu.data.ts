@@ -40,6 +40,7 @@ const menuData = {
       description: "Pan telera con aguacate y los acompañantes. Elige tu carne: Adobada, Res, Tripa o Lengua.",
       category: "tortas",
       priceCents: 7000,
+      tags: ["popular"],
       sortOrder: 10,
     },
     // --- Bebidas -----------------------------------------------------------
