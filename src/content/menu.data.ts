@@ -26,7 +26,7 @@ const menuData = {
     // Tacos de ollita, estilo Villa de Álvarez: precio único, se elige la carne.
     {
       id: "taco-ollita",
-      name: "Taco de Ollita",
+      name: "Tacos",
       description: "Elige tu carne: Adobada, Res, Tripa o Lengua.",
       category: "tacos",
       priceCents: 2000,
