@@ -25,13 +25,13 @@ export function About() {
         <h2 className="type-h2 mt-2">Toda una tradición en Villa de Álvarez</h2>
         <p className="type-body-l mt-5 text-text-muted">
           Nacimos en el corazón de Villa de Álvarez y crecimos sirviendo el sabor que une a las
-          familias de la región. Cada taco, cada torta y cada orden lleva la misma sazón de
-          siempre: ingredientes frescos, recetas de casa y el cariño de quienes nos visitan
-          generación tras generación.
+          familias de la región. Cada taco y cada torta llevan la misma sazón de siempre:
+          ingredientes frescos, recetas de casa y el cariño de quienes nos visitan generación
+          tras generación.
         </p>
         <p className="type-body mt-4 text-text-muted">
           Más que una taquería, somos un punto de encuentro. Por eso seguimos creciendo con tres
-          sucursales y servicio para tus eventos, sin perder nunca el placer del sabor que nos hizo
+          sucursales y servicio para tus eventos, sin perder nunca el sabor que nos hizo
           tradición.
         </p>
       </div>

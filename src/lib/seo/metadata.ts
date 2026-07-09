@@ -29,7 +29,7 @@ const baseTwitter = {
 
 export function homeMetadata(): Metadata {
   const title = `${SITE_NAME} — ${site.tagline} | Tacos en ${CITY}`;
-  const description = `Taquería ${SITE_NAME} — toda una tradición en ${REGION_NICKNAME}, ${CITY}, ${REGION}. Tacos, tortas y órdenes con el sabor de siempre. Servicio de eventos y catering.`;
+  const description = `Taquería ${SITE_NAME} — toda una tradición en ${REGION_NICKNAME}, ${CITY}, ${REGION}. Tacos y tortas con el sabor de siempre. Servicio de eventos y catering.`;
 
   return {
     title,
@@ -47,7 +47,7 @@ export function homeMetadata(): Metadata {
 
 export function menuMetadata(): Metadata {
   const title = "Menú completo";
-  const description = `Menú de ${SITE_NAME} en ${CITY}: tacos, tortas, quesadillas, órdenes, bebidas. Precios actualizados. ${site.tagline}.`;
+  const description = `Menú de ${SITE_NAME} en ${CITY}: tacos, tortas, bebidas. Precios actualizados. ${site.tagline}.`;
 
   return {
     title,

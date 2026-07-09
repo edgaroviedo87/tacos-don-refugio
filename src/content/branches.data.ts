@@ -44,10 +44,10 @@ const branchesData = [
   },
   {
     id: "de-pasadita",
-    name: "De Pasadita",
+    name: "Camino Real",
     address: "Centro, Villa de Álvarez, Colima, México",
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Tacos+Don+Refugio+De+Pasadita+Villa+de+%C3%81lvarez+Colima",
+      "https://www.google.com/maps/search/?api=1&query=Tacos+Don+Refugio+Camino+Real+Villa+de+%C3%81lvarez+Colima",
     phone: "312 145 9820",
     hours: [{ days: "Lunes a Domingo", open: "08:00", close: "22:00" }],
     restDay: "Martes",

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: `${site.name} — ${site.tagline} | Tacos en ${site.city}`,
     template: `%s | ${site.name}`,
   },
-  description: `${site.name}, toda una tradición en el Valle de Colima. Tacos, tortas y órdenes en ${site.city}, ${site.region}. ${site.tagline}.`,
+  description: `${site.name}, toda una tradición en el Valle de Colima. Tacos y tortas en ${site.city}, ${site.region}. ${site.tagline}.`,
   applicationName: site.name,
   keywords: [
     "tacos Villa de Álvarez",

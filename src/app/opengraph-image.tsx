@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Tacos Don Refugio — El Placer del Sabor | Villa de Álvarez, Colima";
+export const alt = "Tacos Don Refugio — El Sabor de Siempre | Villa de Álvarez, Colima";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -68,7 +68,7 @@ export default function Image() {
             textAlign: "center",
           }}
         >
-          El Placer del Sabor
+          El Sabor de Siempre
         </div>
 
         {/* Divider line */}

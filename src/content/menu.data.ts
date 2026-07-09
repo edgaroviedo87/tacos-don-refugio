@@ -4,7 +4,7 @@
  * Authoring rules:
  * - English keys, Spanish display values (es-MX).
  * - Money is integer centavos (1700 === $17.00). See spec §5.2.
- * - Tacos, órdenes, and tortas carry owner-confirmed prices (2026-07-01).
+ * - Tacos and tortas carry owner-confirmed prices (2026-07-01).
  *   Remaining items (bebidas, extras) are still PLACEHOLDERS marked with
  *   `// TODO(owner): confirm price`. Replace once the owner confirms them.
  *
@@ -27,48 +27,17 @@ const menuData = {
     {
       id: "taco-ollita",
       name: "Taco de Ollita",
-      description: "Elige tu carne: Res, Chicharrón, Frijol, Cerdo, Lengua o Hígado.",
+      description: "Elige tu carne: Adobada, Res, Tripa o Lengua.",
       category: "tacos",
       priceCents: 2000,
       tags: ["popular"],
       sortOrder: 10,
     },
-    // --- Órdenes ---------------------------------------------------------
-    // Plato de carne por tamaño: mismo precio para cualquiera de las 6 carnes.
-    {
-      id: "orden",
-      name: "Orden",
-      description: "Elige tu carne: Res, Chicharrón, Frijol, Cerdo, Lengua o Hígado.",
-      category: "ordenes",
-      variants: [
-        { label: "Mini", priceCents: 9000 },
-        { label: "Chica", priceCents: 16000 },
-        { label: "Grande", priceCents: 25000 },
-      ],
-      tags: ["popular"],
-      sortOrder: 10,
-    },
-    {
-      id: "quesadilla",
-      name: "Quesadilla",
-      description: "Tortilla con queso y guiso a elegir.",
-      category: "ordenes",
-      priceCents: 8000, // TODO(owner): confirm price
-      sortOrder: 20,
-    },
-    {
-      id: "mulita",
-      name: "Mulita",
-      description: "Doble tortilla con carne y queso gratinado.",
-      category: "ordenes",
-      priceCents: 10000, // TODO(owner): confirm price
-      sortOrder: 30,
-    },
     // --- Tortas ------------------------------------------------------------
     {
       id: "torta",
       name: "Torta",
-      description: "Pan telera con aguacate y los acompañantes. Elige tu carne: Res, Chicharrón, Frijol, Cerdo, Lengua o Hígado.",
+      description: "Pan telera con aguacate y los acompañantes. Elige tu carne: Adobada, Res, Tripa o Lengua.",
       category: "tortas",
       priceCents: 7000,
       sortOrder: 10,

@@ -11,7 +11,6 @@ import { MenuItem } from "./MenuItem";
 const CATEGORY_ORDER: { key: MenuCategoryName; label: string }[] = [
   { key: "tacos", label: "Tacos" },
   { key: "tortas", label: "Tortas" },
-  { key: "ordenes", label: "Órdenes" },
   { key: "bebidas", label: "Bebidas" },
   { key: "extras", label: "Extras" },
 ];
@@ -81,7 +80,7 @@ export function Menu({
       {showHeading && (
         <div className="text-center">
           <Eyebrow>Nuestro menú</Eyebrow>
-          <h2 className="type-h2 mt-2">Tacos, tortas y órdenes</h2>
+          <h2 className="type-h2 mt-2">Tacos y tortas</h2>
         </div>
       )}
 

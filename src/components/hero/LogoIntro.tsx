@@ -153,7 +153,7 @@ export function LogoIntro() {
         <div className={styles.logoGlow}>
           <Image
             src="/images/logo.png"
-            alt="Tacos Don Refugio — El Placer del Sabor"
+            alt="Tacos Don Refugio — El Sabor de Siempre"
             width={480}
             height={246}
             priority

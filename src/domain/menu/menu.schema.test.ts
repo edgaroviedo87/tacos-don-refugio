@@ -31,13 +31,13 @@ describe("MenuItem", () => {
 
   it("parses a valid item priced via variants", () => {
     const result = MenuItem.parse({
-      id: "orden-tacos",
-      name: "Orden de Tacos",
-      category: "ordenes",
-      variants: [{ label: "Orden de 5", priceCents: 8000 }],
+      id: "agua-fresca",
+      name: "Agua Fresca",
+      category: "bebidas",
+      variants: [{ label: "Chico", priceCents: 2000 }],
     });
 
-    expect(result.variants?.[0]?.priceCents).toBe(8000);
+    expect(result.variants?.[0]?.priceCents).toBe(2000);
   });
 
   it("rejects an item with neither priceCents nor variants", () => {
@@ -79,7 +79,6 @@ describe("MenuCategory", () => {
     expect(MenuCategory.options).toEqual([
       "tacos",
       "tortas",
-      "ordenes",
       "bebidas",
       "extras",
     ]);
@@ -113,10 +112,7 @@ describe("menu.data", () => {
     const byId = new Map(menuData.items.map((item) => [item.id, item]));
 
     expect(byId.get("taco-ollita")?.priceCents).toBe(2000);
-    expect(byId.get("quesadilla")?.priceCents).toBe(8000);
-    expect(byId.get("mulita")?.priceCents).toBe(10000);
     expect(byId.get("torta")?.priceCents).toBe(7000);
-    expect(byId.get("orden")?.variants?.[0]?.priceCents).toBe(9000);
   });
 
   it("gives every item a usable price (flat or via variants)", () => {

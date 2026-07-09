@@ -10,7 +10,7 @@ export function HeroContent() {
       <h1 className="type-display text-on-dark">Antojos que valen la pena</h1>
 
       <p className="type-body-l mx-auto mt-4 max-w-xl text-on-dark-muted">
-        Tacos, tortas y órdenes con el sabor de siempre. Toda una tradición en {site.city},{" "}
+        Tacos y tortas con el sabor de siempre. Toda una tradición en {site.city},{" "}
         {site.region}.
       </p>
 

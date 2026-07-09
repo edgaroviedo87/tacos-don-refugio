@@ -81,7 +81,7 @@ export function buildRestaurantJsonLd(branch: Branch, siteUrl: string): object {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: `${site.name} — ${branch.name}`,
-    description: `Taquería ${site.name} en ${ADDRESS_LOCALITY}. Tacos, tortas y órdenes artesanales.`,
+    description: `Taquería ${site.name} en ${ADDRESS_LOCALITY}. Tacos y tortas artesanales.`,
     url: `${siteUrl}/sucursales/${branch.id}`,
     address: {
       "@type": "PostalAddress",
@@ -133,7 +133,6 @@ export function buildMenuJsonLd(menu: Menu, siteUrl: string): object {
   const CATEGORY_LABELS: Record<string, string> = {
     tacos: "Tacos",
     tortas: "Tortas",
-    ordenes: "Órdenes",
     bebidas: "Bebidas",
     extras: "Extras",
   };

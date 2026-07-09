@@ -5,7 +5,7 @@
  */
 export const site = {
   name: "Tacos Don Refugio",
-  tagline: "El Placer del Sabor",
+  tagline: "El Sabor de Siempre",
   city: "Villa de Álvarez",
   region: "Colima",
   country: "México",

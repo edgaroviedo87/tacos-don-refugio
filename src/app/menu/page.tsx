@@ -23,7 +23,7 @@ export default function MenuPage() {
         <Container className="mb-10 max-w-3xl text-center">
           <h1 className="type-h1 text-brown-900">Nuestro menú completo</h1>
           <p className="type-body-l mt-3 text-text-muted">
-            Tacos, tortas y órdenes con el sabor de siempre en {site.city}.
+            Tacos y tortas con el sabor de siempre en {site.city}.
           </p>
         </Container>
         <Menu variant="full" showHeading={false} />
